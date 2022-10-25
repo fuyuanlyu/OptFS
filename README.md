@@ -34,7 +34,7 @@ python -u maskTrainer.py $YOUR_DATASET $YOUR_MODEL \
         --data_dir $PATH_TO_PROCESSED_DATASET \
         --cuda 0 --lr $LR --l2 $L2 \
         --reg_lambda $LAMBDA --final_temp $TEMP \
-        --max_epoch $EPOCH --rewind_epoch $REWIND
+        --search_epoch $EPOCH --rewind_epoch $REWIND
 ```
 
 ### Hyperparameter Settings
@@ -50,6 +50,6 @@ Here we list the hyper-parameters we used in the following table.
 
 The following procedure describes how we determine these hyper-parameters:
 
-First, we determine the hyper-parameters of the basic models by grid search: learning ratio and l<sub>2</sub> regularization. We select the optimal learning ratio _lr_ from \{1e-3, 3e-4, 1e-4, 3e-5, 1e-5\} and l<sub>2</sub> regularization from \{3e-4, 1e-4, 3e-5, 1e-5, 3e-6, 1e-6\}. Adam optimizer and Xavier initialization are adopted. We empirically set the batch size to be 2048, embedding dimension to be 16, MLP structure to be [1024, 512, 256].
+First, we determine the hyper-parameters of the basic models by grid search: learning ratio and l<sub>2</sub> regularization. We select the optimal learning ratio _lr_ from \{1e-3, 3e-4, 1e-4, 3e-5, 1e-5\} and l<sub>2</sub> regularization from \{3e-4, 1e-4, 3e-5, 1e-5, 3e-6, 1e-6\}. Adam optimizer and Xavier initialization are adopted. We empirically set the batch size to be 4096, embedding dimension to be 16, MLP structure to be [1024, 512, 256].
 
-Second, we tune the hyper-parameters introduced by the OptFS method. We select the regularization lambda _lambda_ from \{1e-8, 5e-9, 2e-9, 1e-9\}, final temperature _temp_ from \{10000, 5000, 2000, 1000, 500, 200, 100\}, maximum epoch _epoch_ from \{5, 10, 15, 20\} and rewind epoch _rewind_ from \{0, 1, ..., _epoch_-1\}. During tuning process, we fix the optimal learning ratio _lr_ and l<sub>2</sub> regularization determined in the first step.
+Second, we tune the hyper-parameters introduced by the OptFS method. We select the regularization lambda _lambda_ from \{1e-8, 5e-9, 2e-9, 1e-9\}, final temperature _temp_ from \{10000, 5000, 2000, 1000, 500, 200, 100\}, search epoch _epoch_ from \{5, 10, 15, 20\} and rewind epoch _rewind_ from \{0, 1, ..., _epoch_-1\}. During tuning process, we fix the optimal learning ratio _lr_ and l<sub>2</sub> regularization determined in the first step.

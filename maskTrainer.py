@@ -22,7 +22,7 @@ parser.add_argument("--lr", type=float, help="learning rate" , default=1e-4)
 parser.add_argument("--l2", type=float, help="L2 regularization", default=1e-5)
 parser.add_argument("--bsize", type=int, help="batchsize", default=4096)
 parser.add_argument("--optim", type=str, default="Adam", help="optimizer type")
-parser.add_argument("--max_epoch", type=int, default=15, help="maxmium epochs")
+parser.add_argument("--max_epoch", type=int, default=20, help="maxmium epochs")
 parser.add_argument("--save_dir", type=Path, help="model save directory")
 
 # neural network hyperparameters
@@ -37,7 +37,7 @@ parser.add_argument("--cuda", type=int, choices=range(-1, 8), default=-1, help="
 
 # mask information
 parser.add_argument("--mask_init", type=float, default=0.5, help="mask initial value" )
-parser.add_argument("--final_temp", type=float, default=200.0, help="final temperature")
+parser.add_argument("--final_temp", type=float, default=200, help="final temperature")
 parser.add_argument("--search_epoch", type=int, default=20, help="search epochs")
 parser.add_argument("--rewind_epoch", type=int, default=1, help="rewind epoch")
 parser.add_argument("--reg_lambda", type=float, default=1e-8, help="regularization rate")
