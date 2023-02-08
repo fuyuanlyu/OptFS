@@ -45,8 +45,8 @@ Here we list the hyper-parameters we used in the following table.
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | FM            | _lr_=3e-4, l<sub>2</sub>=1e-5, _lambda_=2e-9, _temp_=1000, _epoch_=10, _rewind_=1 | _lr_=3e-4, l<sub>2</sub>=1e-6, _lambda_=2e-9, _temp_=5000, _epoch_=5, _rewind_=4 | _lr_=3e-5, l<sub>2</sub>=1e-5, _lambda_=2e-9, _temp_=1000, _epoch_=10, _rewind_=0 |
 | DeepFM        | _lr_=3e-4, l<sub>2</sub>=3e-5, _lambda_=5e-9, _temp_=200,  _epoch_=15, _rewind_=1 | _lr_=3e-4, l<sub>2</sub>=3e-6, _lambda_=2e-9, _temp_=5000, _epoch_=5, _rewind_=3 | _lr_=3e-5, l<sub>2</sub>=1e-5, _lambda_=2e-9, _temp_=1000, _epoch_=10, _rewind_=0 |
-| DCN           | _lr_=3e-4, l<sub>2</sub>=3e-6, _lambda_=1e-8, _temp_=10000, _epoch_=5, _rewind_=2 | _lr_=3e-4, l<sub>2</sub>=3e-6, _lambda_=2e-9, _temp_=5000, _epoch_=5, _rewind_=2 | _lr_=3e-5, l<sub>2</sub>=1e-5, _lambda_=5e-9, _temp_=1000, _epoch_=5,  _rewind_=0 |
-| IPNN          | _lr_=3e-4, l<sub>2</sub>=3e-6, _lambda_=5e-9, _temp_=2000, _epoch_=10, _rewind_=1 | _lr_=3e-4, l<sub>2</sub>=3e-6, _lambda_=2e-9, _temp_=5000, _epoch_=5, _rewind_=2 | _lr_=3e-5, l<sub>2</sub>=1e-5, _lambda_=2e-9, _temp_=1000, _epoch_=10, _rewind_=0 |
+| DCN           | _lr_=3e-4, l<sub>2</sub>=3e-6, _lambda_=1e-8, _temp_=10000, _epoch_=5, _rewind_=2 | _lr_=3e-4, l<sub>2</sub>=3e-6, _lambda_=2e-9, _temp_=5000, _epoch_=5, _rewind_=2 | _lr_=3e-5, l<sub>2</sub>=1e-5, _lambda_=5e-9, _temp_=1000, _epoch_=5,  _rewind_=2 |
+| IPNN          | _lr_=3e-4, l<sub>2</sub>=3e-6, _lambda_=5e-9, _temp_=2000, _epoch_=10, _rewind_=1 | _lr_=3e-4, l<sub>2</sub>=3e-6, _lambda_=2e-9, _temp_=5000, _epoch_=5, _rewind_=2 | _lr_=3e-5, l<sub>2</sub>=1e-5, _lambda_=2e-9, _temp_=1000, _epoch_=10, _rewind_=2 |
 
 The following procedure describes how we determine these hyper-parameters:
 
