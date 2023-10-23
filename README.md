@@ -53,3 +53,28 @@ The following procedure describes how we determine these hyper-parameters:
 First, we determine the hyper-parameters of the basic models by grid search: learning ratio and l<sub>2</sub> regularization. We select the optimal learning ratio _lr_ from \{1e-3, 3e-4, 1e-4, 3e-5, 1e-5\} and l<sub>2</sub> regularization from \{3e-4, 1e-4, 3e-5, 1e-5, 3e-6, 1e-6\}. Adam optimizer and Xavier initialization are adopted. We empirically set the batch size to be 4096, embedding dimension to be 16, MLP structure to be [1024, 512, 256].
 
 Second, we tune the hyper-parameters introduced by the OptFS method. We select the regularization lambda _lambda_ from \{1e-8, 5e-9, 2e-9, 1e-9\}, final temperature _temp_ from \{10000, 5000, 2000, 1000, 500, 200, 100\}, search epoch _epoch_ from \{5, 10, 15, 20\} and rewind epoch _rewind_ from \{0, 1, ..., _epoch_-1\}. During tuning process, we fix the optimal learning ratio _lr_ and l<sub>2</sub> regularization determined in the first step.
+
+### Reference
+
+Kindly cite our paper using the bibliography below
+```
+@inproceedings{DBLP:conf/www/LyuTLC0L23,
+  author       = {Fuyuan Lyu and
+                  Xing Tang and
+                  Dugang Liu and
+                  Liang Chen and
+                  Xiuqiang He and
+                  Xue Liu},
+  title        = {Optimizing Feature Set for Click-Through Rate Prediction},
+  booktitle    = {Proceedings of the {ACM} Web Conference 2023, {WWW} 2023},
+  pages        = {3386--3395},
+  publisher    = {{ACM}},
+  address      = {Austin, TX, USA},
+  year         = {2023},
+  url          = {https://doi.org/10.1145/3543507.3583545},
+  doi          = {10.1145/3543507.3583545},
+  timestamp    = {Mon, 28 Aug 2023 21:17:10 +0200},
+  biburl       = {https://dblp.org/rec/conf/www/LyuTLC0L23.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+```
